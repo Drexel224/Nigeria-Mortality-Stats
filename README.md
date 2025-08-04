@@ -1,78 +1,135 @@
 # Nigeria Health Data Analysis
 
-This project offers a detailed analysis of health-related statistics for Nigeria, focusing on causes of death, public health indicators, and national health targets. The analysis is built from data scraped from the [World Health Organization (WHO)](https://www.who.int/) website, compiled into the `Nigeria.xlsx` file, and paired with insights from a supplementary report (`Nigeria.pdf`).
+This repository presents an extensive data-driven analysis of Nigeria's public health landscape, focusing on causes of death, health statistics, and national health targets. The project integrates structured data scraped from the [World Health Organization (WHO)] website and is supplemented by key insights extracted from the **Nigeria Health Report (Nigeria.pdf)**.
 
 ---
 
-## Data Sources
+## Data Overview
 
-- **Nigeria.xlsx**: Contains scraped health data from WHO including:
-  - Population statistics (current & projected)
-  - Causes of death and associated death rates
-  - Health statistics and corresponding targets
+- **Source**: Scraped from WHO’s publicly available datasets.
+- **Primary File**: `Nigeria.xlsx`
+- **Supplementary Document**: `Nigeria.pdf` summarizing mortality trends and demographic health patterns.
 
-- **Nigeria.pdf**: Provides summarized visual insights, statistics, and breakdowns that support the spreadsheet data.
+### Dataset Features:
+- Current & Projected Population figures
+- Leading causes of death and associated death rates
+- National health statistics and corresponding target values
 
 ---
 
-## Analysis Objectives
+## Objectives
 
-This project investigates:
-- Major causes of death and their relative contribution to mortality
-- Relationship between population metrics and death rates
-- Key health statistics vs. national targets
-- Distribution and anomalies in death rate data
+This project aims to:
+- Identify top contributors to mortality rates in Nigeria
+- Analyze relationships between population dynamics and death rates
+- Compare health indicators against target benchmarks
+- Detect patterns, outliers, and visualize health trends across regions
 
 ---
 
 ## Key Findings
 
-### Top Causes of Death
-| Cause                         | Death Rate |
-|------------------------------|------------|
-| Malaria                      | 83.5       |
-| Lower respiratory infections | 83.3       |
-| Diarrhoeal diseases          | 64.0       |
-| Tuberculosis                 | 55.9       |
-| Maternal conditions          | 45.4       |
+### Mortality Insights
 
-**Contribution to Total Death Rate (515.00):**
-- Lower respiratory infections — 36.04%
-- Diarrhoeal diseases — 27.13%
-- Malaria — 16.47%
-- Tuberculosis — 11.55%
-- Maternal conditions — 8.82%
+| Cause of Death                  | Death Rate | Contribution to Total (%) |
+|--------------------------------|------------|----------------------------|
+| Lower respiratory infections   | 83.3       | 36.04%                     |
+| Malaria                        | 83.5       | 16.47%                     |
+| Diarrhoeal diseases            | 64.0       | 27.13%                     |
+| Tuberculosis                   | 55.9       | 11.55%                     |
+| Maternal conditions            | 45.4       | 8.82%                      |
 
-### Death Rate Statistics
+**Overall Death Metrics from PDF Report:**
 
-| Metric             | Value   |
-|--------------------|---------|
-| Total Death Rate   | 515.00  |
-| Average Death Rate | 73.57   |
-| Max Death Rate     | 95.90   |
-| Min Death Rate     | 45.40   |
+- **Total Death Rate**: 515.00  
+- **Average Death Rate**: 73.57  
+- **Maximum Death Rate**: 95.90  
+- **Minimum Death Rate**: 45.40  
+
+### Population Context
+
+- Population fields are partially descriptive and non-numeric.
+- Visual map (from `Nigeria.pdf`) highlights regions with lowest projected population floors.
+- Additional projections:
+  - Healthier Populations: ~54.3m (37.6m – 69.5m)
+  - Universal Health Coverage: ~14.9m (9.3m – 20.7m)
+  - Health Emergency Protection: ~7.7m (−34m – 49.1m)
+
+### Health Statistics vs Targets
+
+Sample health metrics include:
+- Maternal Mortality: 1,000 per year
+- Neonatal Mortality: 34.3
+- Air Pollution Mortality: 175
+- Under-5 stunting: 11.6%
+- Hypertension: 36.1%
+- Tobacco use: 3.3%
+- Clean fuels access: 24.4%
+- Domestic government health expenditure: 4.3%
+
+Target alignment and gaps are visualized using bar charts.
 
 ---
 
-## Exploratory Data Analysis
+## Technology & Tools
 
-### Population Metrics
-- Current and projected population fields were sparsely populated and partially non-numeric.
-- Death rate correlations with population metrics were visualized and tested.
+### Programming Language:
+- Python (Jupyter Notebook / Google Colab)
 
-### Health Statistics & Targets
-- Health statistics were extracted and compared to stated health targets.
-- Relationships between statistics and goals were visualized through bar plots.
-
-### Distribution & Outliers
-- Death rates were examined using histograms, KDE plots, and boxplots.
-- Outlier detection was applied using IQR-based filtering.
-
----
-
-## Project Dependencies
-
-Install required Python libraries:
-
+### Key Libraries:
 ```bash
 pip install pandas numpy matplotlib seaborn
+Imports:
+python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+ Data Preprocessing
+Basic operations performed:
+
+Fill missing values: df_filled = df.fillna(0)
+
+Shape: (72 rows, 8 columns)
+
+Data sampling and descriptive statistics
+
+Unique checks on categorical fields
+
+Type coercion to support numeric operations
+
+ Exploratory Data Analysis
+
+Major analytical tasks:
+
+Grouping & ranking causes of death by average death rate
+
+Identifying and removing non-informative entries
+
+Visualizing death rate distribution using histograms, KDE & boxplots
+
+Checking outliers via IQR methodology
+
+Scatter plots to compare population metrics with death rates
+
+ Visual Highlights
+Bar Charts: Death rates by cause
+
+Scatter Plots: Population vs death rate correlations
+
+Boxplots: Outlier detection
+
+Histogram + KDE: Death rate distribution
+
+Categorical Frequency Plots: Health targets by type
+
+ Conclusion
+This project offers a clear data-centric narrative about Nigeria’s public health trends and challenges. It surfaces critical insights on preventable mortality, healthcare access, and government health priorities. The fusion of scraped numerical data and descriptive health report enhances the depth and reliability of findings, providing stakeholders, students, and policymakers with actionable information.
+
+ Repository Contents
+ Nigeria-Mortality-Stats/
+│
+├── Nigeria.xlsx            # Structured health dataset
+├── Nigeria.pdf             # Health insights summary report
+├── Nigeria_Health.ipynb    # Analysis notebook
+└── README.md               # This documentation
