@@ -136,10 +136,3 @@ The fusion of scraped numerical data and descriptive
 of findings, providing stakeholders, students,
 and policymakers with actionable information.
 
- Repository Contents
- Nigeria-Mortality-Stats/
-│
-├── Nigeria.xlsx            # Structured health dataset
-├── Nigeria.pdf             # Health insights summary report
-├── Nigeria_Health.ipynb    # Analysis notebook
-└── README.md               # This documentation
