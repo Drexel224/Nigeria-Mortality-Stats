@@ -123,7 +123,7 @@ Histogram + KDE: Death rate distribution
 
 Categorical Frequency Plots: Health targets by type
 
- Conclusion
+ ## Conclusion
 
 This project offers a clear data-centric narrative about
  Nigeria’s public health trends and challenges.
