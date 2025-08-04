@@ -1,0 +1,6 @@
+ Nigeria-Mortality-Stats/
+│
+├── Nigeria.xlsx            # Structured health dataset
+├── Nigeria.pdf             # Health insights summary report
+├── Nigeria_Health.ipynb    # Analysis notebook
+└── README.md               # This documentation
