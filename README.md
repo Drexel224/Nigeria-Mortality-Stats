@@ -1,77 +1,78 @@
- Nigeria Health Data Analysis
+# 🇳 Nigeria Health Data Analysis
 
-This project explores key health indicators in Nigeria by analyzing and visualizing structured data. It aims to uncover patterns in causes of death, health statistics, targets, and their relationships to population metrics. The analysis is conducted in a Jupyter/Colab notebook using Python.
+This project offers a detailed analysis of health-related statistics for Nigeria, focusing on causes of death, public health indicators, and national health targets. The analysis is built from data scraped from the [World Health Organization (WHO)](https://www.who.int/) website, compiled into the `Nigeria.xlsx` file, and paired with insights from a supplementary report (`Nigeria.pdf`).
 
- Objectives
+---
 
-- Identify Leading Causes of Death: Highlight diseases and conditions contributing most to mortality and their average death rates.
-- Visualize Distribution & Outliers: Understand the spread and anomalies in death rates through statistical plots.
-- Explore Population Relationships: Investigate connections between current/projected population figures and public health outcomes.
-- Understand Health Metrics: Catalog various health statistics and targets to analyze alignment or gaps in government priorities.
-- Support Data-Driven Policy: Provide insights for public health stakeholders and students working on Nigerian healthcare data.
+## Data Sources
 
-	 Dataset
-- Source: `Nigeria.xlsx`
+- **Nigeria.xlsx**: Contains scraped health data from WHO including:
+  - Population statistics (current & projected)
+  - Causes of death and associated death rates
+  - Health statistics and corresponding targets
 
-- Key Columns:
-  - Cause of Death
-  - Death Rate
-  - Population Current & Projected
-  - Health Statistic Title & Value
-  - Health Target Title & Value
+- **Nigeria.pdf**: Provides summarized visual insights, statistics, and breakdowns that support the spreadsheet data.
 
- Libraries Used
+---
 
-- `numpy`
-- `pandas`
-- `matplotlib`
-- `seaborn`
-- 'bash'
+## Analysis Objectives
 
-Technologies Used
+This project investigates:
+- Major causes of death and their relative contribution to mortality
+- Relationship between population metrics and death rates
+- Key health statistics vs. national targets
+- Distribution and anomalies in death rate data
 
-Excel: Data Cleaning
+---
 
-Python: Data analysis
+## Key Findings
 
-Pandas, NumPy: Data manipulation
+### Top Causes of Death
+| Cause                         | Death Rate |
+|------------------------------|------------|
+| Malaria                      | 83.5       |
+| Lower respiratory infections | 83.3       |
+| Diarrhoeal diseases          | 64.0       |
+| Tuberculosis                 | 55.9       |
+| Maternal conditions          | 45.4       |
 
-Matplotlib, Seaborn: Visualisations
+**Contribution to Total Death Rate (515.00):**
+- Lower respiratory infections — 36.04%
+- Diarrhoeal diseases — 27.13%
+- Malaria — 16.47%
+- Tuberculosis — 11.55%
+- Maternal conditions — 8.82%
 
-Power BI: Dashboard
+### Death Rate Statistics
 
-you can check out how it well more visible in a dashboard form below is the link
+| Metric             | Value   |
+|--------------------|---------|
+| Total Death Rate   | 515.00  |
+| Average Death Rate | 73.57   |
+| Max Death Rate     | 95.90   |
+| Min Death Rate     | 45.40   |
 
-https://drive.google.com/file/d/1-vA8cAJs9_wpuWAlTuRpdlN52heQhV5N/view?usp=drive_link
+---
 
-About
-No description, website, or topics provided.
-Resources
- Readme
- Activity
-Stars
- 0 stars
-Watchers
- 0 watching
-Forks
- 0 forks
-Releases
-No releases published
-Create a new release
-Packages
-No packages published
-Publish your first package
-Languages
-Jupyter Notebook
-100.0%
-Footer
-© 2025 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact
- 
+## Exploratory Data Analysis
 
+### Population Metrics
+- Current and projected population fields were sparsely populated and partially non-numeric.
+- Death rate correlations with population metrics were visualized and tested.
+
+### Health Statistics & Targets
+- Health statistics were extracted and compared to stated health targets.
+- Relationships between statistics and goals were visualized through bar plots.
+
+### Distribution & Outliers
+- Death rates were examined using histograms, KDE plots, and boxplots.
+- Outlier detection was applied using IQR-based filtering.
+
+---
+
+## Project Dependencies
+
+Install required Python libraries:
+
+```bash
+pip install pandas numpy matplotlib seaborn
