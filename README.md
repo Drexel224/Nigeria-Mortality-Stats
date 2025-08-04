@@ -1,4 +1,4 @@
-# 🇳 Nigeria Health Data Analysis
+# Nigeria Health Data Analysis
 
 This project offers a detailed analysis of health-related statistics for Nigeria, focusing on causes of death, public health indicators, and national health targets. The analysis is built from data scraped from the [World Health Organization (WHO)](https://www.who.int/) website, compiled into the `Nigeria.xlsx` file, and paired with insights from a supplementary report (`Nigeria.pdf`).
 
