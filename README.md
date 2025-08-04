@@ -125,11 +125,16 @@ Categorical Frequency Plots: Health targets by type
 
  Conclusion
 
-This project offers a clear data-centric narrative about Nigeria’s public health trends and challenges.
+This project offers a clear data-centric narrative about
+ Nigeria’s public health trends and challenges.
 
-It surfaces critical insights on preventable mortality, healthcare access, and government health priorities.
+It surfaces critical insights on preventable mortality,
+ healthcare access, and government health priorities.
 
-The fusion of scraped numerical data and descriptive health report enhances the depth and reliability of findings, providing stakeholders, students, and policymakers with actionable information.
+The fusion of scraped numerical data and descriptive
+ health report enhances the depth and reliability
+of findings, providing stakeholders, students,
+and policymakers with actionable information.
 
  Repository Contents
  Nigeria-Mortality-Stats/
